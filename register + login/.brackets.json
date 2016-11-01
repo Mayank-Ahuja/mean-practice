@@ -1,0 +1,12 @@
+{
+    "jscodehints.detectedExclusions": [
+        "D:/learn/MEANBatchSeptD-master/MEANBatchSeptD-master/CODES/05-Routing/SPA/libs/angular.min.js",
+        "D:/learn/public/js/app.js",
+        "D:/learn/public/js/register/factory.js",
+        "D:/learn/public/js/register/controller.js",
+        "D:/learn/connection.js",
+        "D:/learn/MEANBatchSeptD-master/MEANBatchSeptD-master/mongodemos/public/js/register/factory.js",
+        "D:/learn/MEANBatchSeptD-master/MEANBatchSeptD-master/mongodemos/public/js/register/controller.js",
+        "D:/learn/public/js/login/factory.js"
+    ]
+}
