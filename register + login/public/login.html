@@ -17,6 +17,16 @@
     <input type="password" name="pwd" id="pwd" ng-model="pwd">
     <br>
     <button ng-click="doLogin()">Login</button>
+
+    <div>
+        <ul ng-repeat="credential in credentials">
+            <li>{{credential.userid}}</li>
+            <li>{{credential.password}}</li>
+            <li>{{credential.phone}}</li>
+            <li>{{credential.address}}</li>
+        </ul>
+    </div>
+
 </body>
 
 </html>

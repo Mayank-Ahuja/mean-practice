@@ -6,6 +6,8 @@ var userSchema = new Schema({
     password: String,
     phone: String,
     address: String,
+}, {
+    collection: 'userdatas'
 });
 
 var User = mongoose.model("userdatas", userSchema);
