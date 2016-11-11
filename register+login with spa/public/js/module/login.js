@@ -1,1 +1,1 @@
-var login = angular.module("loginApp", []);
+var login = angular.module("loginApp", ['ngRoute']);

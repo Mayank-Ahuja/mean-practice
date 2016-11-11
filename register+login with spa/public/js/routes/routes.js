@@ -1,14 +1,12 @@
 app.config(function ($routeProvider) {
     $routeProvider.when("/", {
-        templateUrl: "page.html"
+        templateUrl: "views/page.html"
     }).when("/login", {
-        templateUrl: "login.html"
-            /*,
-                    controller: "loginCtrl"*/
+        templateUrl: "views/login.html",
     }).when("/register", {
-        templateUrl: "register.html"
-            /*,
-            controller: "regCtrl"*/
+        templateUrl: "views/register.html",
+    }).when("/dashboard", {
+        templateUrl: "views/dashboard.html"
     }).otherwise({
         template: "Error, No such page found",
         redirectTo: "/"

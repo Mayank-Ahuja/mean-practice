@@ -1,1 +1,1 @@
-var register = angular.module("registerApp", []);
+var register = angular.module("registerApp", ['ngRoute']);
