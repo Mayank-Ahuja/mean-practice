@@ -27,7 +27,7 @@ app.post('/login', function (request, response) {
     var dbOperation = require("./crudOperation");
     var data = request.body;
     console.log("Data is... ", data);
-   /* dbOperation.findUser(data, response);*/
+    dbOperation.findUser(data, response);
 });
 
 app.listen(1234, function () {

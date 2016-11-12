@@ -1,4 +1,4 @@
-app.factory("loginFactory", function () {
+app.factory("loginFactory", function ($http, $q) {
     var object = {
         loginUser: function (loginObject) {
             var defer = $q.defer();
