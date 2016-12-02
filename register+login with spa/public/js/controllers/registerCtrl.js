@@ -29,22 +29,22 @@ app.controller("registerCtrl", function ($scope, regFactory) {
     $scope.doEmailCheck = function () {
         if ($scope.eMail !== "") {
             var emailObject = {
-                "email":
+                "email": $scope.eMail
             }
             var promise = regFactory.checkEmail(emailObject);
             promise.then(function (data) {
-                var emails = data.data.details;
-                console.log(emails);
-                if (emails.length > 0) {
-                    $scope.mail = "email id  already in use...";
+                var contacts = data.data.details;
+                console.log(contacts);
+                if (contacts.length > 0) {
+                    $scope.mail = "email id already in use...";
                 } else {
-                    $scope.mail = "";
+                    $scope.numailmber = "";
                 }
             }, function (error) {
                 alert(error);
             });
         } else {
-            $scope.mail = "please enter your email"
+            $scope.mail = "please enter your email id";
         }
     }
     $scope.doContactCheck = function () {
