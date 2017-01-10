@@ -41,7 +41,7 @@
     /* Chrome, Opera 15+, Safari 3.1+ */
     -ms-transform: rotateZ(-45deg);
     /* IE 9 */
-    -moz-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(-45deg);
     transform: rotateZ(-45deg);
     -webkit-transition: transform 0.5s linear;
     -moz-transition: transform 0.5s linear;
