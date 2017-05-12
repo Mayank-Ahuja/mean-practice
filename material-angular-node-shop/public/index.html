@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <title></title>
     <meta charset="utf-8">
@@ -8,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
     <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/style.css">
-    <!--<script src="../bower_components/jquery/dist/jquery.min.js"></script>-->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/materialize/dist/js/materialize.min.js"></script>
     <script src="../bower_components/angular/angular.min.js"></script>
     <script src="../bower_components/angular-route/angular-route.min.js"></script>
     <script src="js/app.js"></script>
@@ -18,37 +20,55 @@
 
 <body ng-app="myApp">
     <nav>
-        <div class="row">
-            <div class="col m2 valign-wrapper">
-                <a href="#" class="valign">Logo</a>
-            </div>
-            <div class="col m6">
-                <div class="row search-from">
-                    <form action="" class="col s12">
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="search" type="search" required>
-                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                                <i class="material-icons">close</i>
+        <div class="nav-wrapper">
+            <div class="row">
+                <div class="col m2">
+                    <div class="brand valign-wrapper">
+                        <a href="#" class="right-align valign">Logo</a>
+                    </div>
+                </div>
+                <div class="col m6">
+                    <div class="row search-form">
+                        <form action="" class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="search" type="search" required>
+                                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                    <i class="material-icons">close</i>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
+                </div>
+                <div class="login-sign col m4 valign-wrapper">
+                    <ul class="row valign">
+                        <li class="col s3"><a href="#/login">Login</a></li>
+                        <li class="col s3"><a href="#/signup">SignUp</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="login-sign col m4">
-                <ul class="row">
-                    <li class="col s3"><a href="#/login">Login</a></li>
-                    <li class="col s3"><a href="#/signup">SignUp</a></li>
-                </ul>
+            <div class="row">
+                <div class="col s12 m10 offset-s2">
+                    <div class="mainMenu">
+                        <ul ng-controller="menuCtrl">
+                            <li ng-style="menuwidth" class="menu" ng-repeat="menu in menus">
+                                <a ng-href="#/{{menu.name}}">{{menu.name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="mainMenu" class="row">
-            <div class="col-xs-offset-2 col-xs-9">
-                <ul ng-controller="menuCtrl">
-                    <li class="menu" ng-repeat="menu in menus">
-                        {{menu.name}}
-                    </li>
-                </ul>
+            <div class="quickLinks">
+                <div class="row">
+                    <div class="col s12 m10 offset-s2">
+                        <div class="quicklink">
+                            <ul ng-controller="quickLinkCtrl">
+                                <li>Go Quickly To -></li>
+                                <li class="links" ng-repeat="menus in quickMenu"><a ng-href="#/{{menus.name}}">{{menus.name}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>

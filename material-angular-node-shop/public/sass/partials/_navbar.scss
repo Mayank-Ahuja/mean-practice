@@ -1,7 +1,60 @@
 nav {
-    height: 125px;
-    .row {
+    height: auto;
+    float: left;
+    width: 100%;
+    .nav-wrapper {
+        position: relative;
+        .row {
+            height: auto;
+            line-height: normal;
+        }
+        .brand {
+            a {
+                display: block;
+                width: 100%;
+                font-size: 32px;
+            }
+        }
+        .brand,
+        .login-sign {
+            height: 50px;
+        }
+        .login-sign {
+            .row.valign {
+                margin: 15px 0 0;
+                width: 100%;
+            }
+        }
+        .quickLinks {
+            background: $white;
+            float: left;
+            width: 100%;
+            color: $black;
+            padding: 5px 0;
+            .row {
+                margin-bottom: 0;
+            }
+            .quicklink {
+                .links {
+                    border-right: 1px solid $black;
+                    a {
+                        color: $black;
+                        &:hover {
+                            background: $white;
+                        }
+                    }
+                    &:last-child {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+    .search-form {
         margin-bottom: 0;
+        .row {
+            margin-bottom: 0;
+        }
     }
     .input-field {
         input {
@@ -11,9 +64,9 @@ nav {
             margin-top: 12px;
         }
     }
-    .login-sign{
-        ul{
-            a{
+    .login-sign {
+        ul {
+            a {
                 padding: 0;
             }
         }
