@@ -3,10 +3,24 @@ nav {
     float: left;
     width: 100%;
     .nav-wrapper {
-        position: relative;
+        float: left;
+        width: 100%;
         .row {
             height: auto;
             line-height: normal;
+        }
+        .mainMenu {
+            float: left;
+            width: 100%;
+            height: 20px;
+            .menu{
+                a{
+                    display: inline-block;
+                    &:hover{
+                        background: transparent;
+                    }
+                }
+            }
         }
         .brand {
             a {
@@ -71,4 +85,9 @@ nav {
             }
         }
     }
+}
+
+.slider{
+    float: left;
+    height: 500px;
 }

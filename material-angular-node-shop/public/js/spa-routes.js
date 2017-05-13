@@ -1,7 +1,8 @@
-app.config(function($routeProvider){
+app.config(function($routeProvider,$locationProvider){
+    $locationProvider.html5Mode(true).hashPrefix('');
     $routeProvider
         .when("/",{
-        templateUrl:"page.html"
+        templateUrl:"views/index-home.html"
         }).when("/mobiles",{
             templateUrl:"views/electronics/mobiles.html"
         })
